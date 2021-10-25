@@ -11,7 +11,7 @@ const Tag = () => {
     <div className="container">
       <h1 className="margin-right">
         Change how we{" "}
-        <u id="target" onMouseEnter={textToggle} onMouseLeave={textToggle}>
+        <u id="target" onMouseEnter={textToggle}>
           WG
         </u>
         :{" "}

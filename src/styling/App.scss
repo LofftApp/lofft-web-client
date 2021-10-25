@@ -2,6 +2,7 @@
 @import "components/animation";
 @import "components/header";
 @import "components/middleText";
+@import "components/email";
 
 * {
   cursor: default;
@@ -18,7 +19,7 @@ body,
   display: flex;
   color: white;
   padding: 0 5%;
-  margin-top: 200px;
+  // margin-top: 200px;
   h1,
   #date {
     margin-top: 45px;
