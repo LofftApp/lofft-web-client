@@ -14,7 +14,7 @@ const EmailList = () => {
   return (
     <ul>
       {emails.map((email) => (
-        <li>{email}</li>
+        <li>{email.email.toString()}</li>
       ))}
     </ul>
   );
