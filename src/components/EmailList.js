@@ -1,14 +1,13 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const EmailList = () => {
   console.log("The email list has been imported");
   const [emails, setEmails] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3001/api/v1/emails")
-      .then((response) => response.json())
-      .then((data) => {
-        setEmails(data);
-      });
+    axios.get("http://localhost:3001/api/v1/emails").then((response) => {
+      setEmails(response.data);
+    });
   }, []);
 
   return (
