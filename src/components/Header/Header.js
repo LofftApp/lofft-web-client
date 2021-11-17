@@ -11,7 +11,7 @@ const Header = ({ toggle, isLanding }) => {
       <nav className="nav">
         <ul className="nav-links">
           <li className="nav-link">
-            <Link to="/investors">Investors Page</Link>
+            <Link to="/investors">For Investors</Link>
           </li>
           <li className="nav-link">
             <Link to="/signup">Signup</Link>

@@ -14,15 +14,17 @@ header {
 }
 
 .nav-link {
-  cursor: pointer;
   display: inline-block;
   a {
     text-decoration: none;
     color: black;
+    font-size: 24px;
+    margin: 0 20px;
+    cursor: pointer;
   }
 }
 
-.nav-link:hover:not(.nav-active) {
+.nav-link a:hover:not(.nav-active) {
   border-bottom: 3px solid $lavender50;
 }
 
