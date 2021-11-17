@@ -13,6 +13,7 @@ const Header = ({ toggle, isLanding }) => {
           <li className="nav-link">
             <Link to="/investors">For Investors</Link>
           </li>
+          {/* Temporary link to test API interaction and a login page */}
           <li className="nav-link">
             <Link to="/signup">Signup</Link>
           </li>
