@@ -1,31 +1,14 @@
 import React, { useState } from "react";
-import lofftAPI from "../api/lofftAPI";
+import { userSubmissionButton } from "../context/AuthorizationContext";
 
-const signupSubmit = async ({ email, password }) => {
-  try {
-    const response = await lofftAPI.post("/signin", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      user: {
-        email,
-        password,
-      },
-    });
-    await console.log(response.headers);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const Signup = () => {
+export const UserRegButton = ({ action }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        signupSubmit({ email, password });
+        userSubmissionButton({ action, email, password });
       }}
     >
       <input
@@ -40,7 +23,7 @@ export const Signup = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <input type="submit" value="Signup" />
+      <input type="submit" value={action} />
     </form>
   );
 };

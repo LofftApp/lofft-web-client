@@ -4,7 +4,7 @@ import LandingPage from "./components/LandingPage";
 import Modal from "./components/Modal";
 
 import { useState } from "react";
-import { Signup } from "./components/Signup";
+import { UserRegButton } from "./components/UserRegButton";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Signup />
+      {localStorage.token ? null : <UserRegButton action="signin" />}
       <LandingPage setModal={setModal} />
       {showModal && <Modal data={modalData} toggleModal={toggleModal} />}
     </div>
